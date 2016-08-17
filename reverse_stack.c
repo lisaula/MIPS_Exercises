@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 struct node
 {
     int a;
@@ -69,7 +68,6 @@ void display(struct node *head)
     }
 }
 
- 
 
 void generate(struct node **head)
 {
@@ -100,8 +98,8 @@ void generate(struct node **head)
             *head = temp;
         }
     }
-}
- 
+} 
+
 void delete(struct node **head)
 {
     struct node *temp;
