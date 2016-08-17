@@ -7,17 +7,17 @@ void merge(int [], int, int, int);
 
 void mergeSort(int arr[], int l, int r)
 {
-    cout<<"Right: "<<r<<endl;
+    //cout<<"Right: "<<r<<endl;
     //cout<<"Entered here"<<endl;
     if (l < r)
     {   
         int m = l+(r-l)/2; //Same as (l+r)/2, but avoids overflow for large l and h
         mergeSort(arr, l, m);
 
-        cout<<"Out of first recursive call"<<endl;
+        //cout<<"Out of first recursive call"<<endl;
         mergeSort(arr, m+1, r);
 
-        cout<<"Out of all major calls"<<endl;
+        //cout<<"Out of all major calls"<<endl;
         merge(arr, l, m, r);
     }
 }
@@ -28,7 +28,7 @@ void merge(int arr[], int l, int m, int r)
     int n1 = m - l + 1;
     int n2 =  r - m;
 
-    cout<<"Merge enter"<<endl;
+    //cout<<"Merge enter"<<endl;
     /* create temp arrays */
     int L[n1], R[n2];
 
@@ -36,7 +36,7 @@ void merge(int arr[], int l, int m, int r)
     for(i = 0; i < n1; i++)
         L[i] = arr[l + i];
     for(j = 0; j < n2; j++)
-        R[j] = arr[m + 1+ j];
+        R[j] = arr[m + 1 + j];
 
     /* Merge the temp arrays back into arr[l..r]*/
     i = 0;//t4
